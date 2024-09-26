@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Python Quiz</title>
+</head>
+<body>
+    <center><h1>Python Knowledge Quiz</h1></center>
+    <form action="/" method="POST">
+        <label for="student-name">Student Name:</label><br>
+        <input type="text" id="student-name" name="student_name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="father-name">Father's Name:</label><br>
+        <input type="text" id="father-name" name="father_name" required><br><br>
+
+        <label for="contact-no">Contact Number:</label><br>
+        <input type="tel" id="contact-no" name="contact_no" required><br><br>
+
+        <label>1. What is the output of `print(type([]))`?</label><br>
+        <input type="radio" id="list" name="question1" value="List" required>
+        <label for="list">List</label><br>
+        <input type="radio" id="tuple" name="question1" value="Tuple">
+        <label for="tuple">Tuple</label><br>
+        <input type="radio" id="dict" name="question1" value="Dict">
+        <label for="dict">Dict</label><br>
+        <input type="radio" id="set" name="question1" value="Set">
+        <label for="set">Set</label><br><br>
+
+        <label>2. Which of the following is a mutable data type in Python?</label><br>
+        <input type="radio" id="list_mut" name="question2" value="List" required>
+        <label for="list_mut">List</label><br>
+        <input type="radio" id="tuple_mut" name="question2" value="Tuple">
+        <label for="tuple_mut">Tuple</label><br>
+        <input type="radio" id="string_mut" name="question2" value="String">
+        <label for="string_mut">String</label><br>
+        <input type="radio" id="frozenset_mut" name="question2" value="Frozenset">
+        <label for="frozenset_mut">Frozenset</label><br><br>
+
+        <label>3. What keyword is used to define a function in Python?</label><br>
+        <input type="radio" id="def" name="question3" value="def" required>
+        <label for="def">def</label><br>
+        <input type="radio" id="func" name="question3" value="func">
+        <label for="func">func</label><br>
+        <input type="radio" id="define" name="question3" value="define">
+        <label for="define">define</label><br>
+        <input type="radio" id="function" name="question3" value="function">
+        <label for="function">function</label><br><br>
+
+        <label>4. Which of the following is the correct way to create a list in Python?</label><br>
+        <input type="radio" id="list1" name="question4" value="[1, 2, 3]" required>
+        <label for="list1">[1, 2, 3]</label><br>
+        <input type="radio" id="list2" name="question4" value="(1, 2, 3)">
+        <label for="list2">(1, 2, 3)</label><br>
+        <input type="radio" id="list3" name="question4" value="{1, 2, 3}">
+        <label for="list3">{1, 2, 3}</label><br>
+        <input type="radio" id="list4" name="question4" value="1, 2, 3">
+        <label for="list4">1, 2, 3</label><br><br>
+
+        <label>5. What is the output of `print(0.1 + 0.2 == 0.3)`?</label><br>
+        <input type="radio" id="true" name="question5" value="True" required>
+        <label for="true">True</label><br>
+        <input type="radio" id="false" name="question5" value="False">
+        <label for="false">False</label><br><br>
+
+        <label>6. Which of the following is not a valid variable name?</label><br>
+        <input type="radio" id="var1" name="question6" value="var_1" required>
+        <label for="var1">var_1</label><br>
+        <input type="radio" id="var2" name="question6" value="1var">
+        <label for="var2">1var</label><br>
+        <input type="radio" id="var3" name="question6" value="var-1">
+        <label for="var3">var-1</label><br>
+        <input type="radio" id="var4" name="question6" value="var1">
+        <label for="var4">var1</label><br><br>
+
+        <label>7. What does the `len()` function do?</label><br>
+        <input type="radio" id="length" name="question7" value="Returns length of an object" required>
+        <label for="length">Returns length of an object</label><br>
+        <input type="radio" id="size" name="question7" value="Returns size of an object">
+        <label for="size">Returns size of an object</label><br>
+        <input type="radio" id="none" name="question7" value="Returns None">
+        <label for="none">Returns None</label><br><br>
+
+        <label>8. What will be the output of `print(bool(""))`?</label><br>
+        <input type="radio" id="true1" name="question8" value="True" required>
+        <label for="true1">True</label><br>
+        <input type="radio" id="false1" name="question8" value="False">
+        <label for="false1">False</label><br><br>
+
+        <label>9. What keyword is used to handle exceptions in Python?</label><br>
+        <input type="radio" id="try" name="question9" value="try" required>
+        <label for="try">try</label><br>
+        <input type="radio" id="except" name="question9" value="except">
+        <label for="except">except</label><br>
+        <input type="radio" id="finally" name="question9" value="finally">
+        <label for="finally">finally</label><br><br>
+
+        <label>10. Which of the following is a built-in data type in Python?</label><br>
+        <input type="radio" id="list2" name="question10" value="List" required>
+        <label for="list2">List</label><br>
+        <input type="radio" id="map" name="question10" value="Map">
+        <label for="map">Map</label><br>
+        <input type="radio" id="set" name="question10" value="Set">
+        <label for="set">Set</label><br>
+        <input type="radio" id="array" name="question10" value="Array">
+        <label for="array">Array</label><br><br>
+
+        <label>11. What will be the output of `print("Hello"[0])`?</label><br>
+        <input type="radio" id="H" name="question11" value="H" required>
+        <label for="H">H</label><br>
+        <input type="radio" id="e" name="question11" value="e">
+        <label for="e">e</label><br>
+        <input type="radio" id="o" name="question11" value="o">
+        <label for="o">o</label><br>
+        <input type="radio" id="l" name="question11" value="l">
+        <label for="l">l</label><br><br>
+
+        <label>12. What is the output of `print("2" + "2")`?</label><br>
+        <input type="radio" id="4" name="question12" value="4" required>
+        <label for="4">4</label><br>
+        <input type="radio" id="22" name="question12" value="22">
+        <label for="22">22</label><br><br>
+        <input type="radio" id="2" name="question12" value="2">
+        <label for="2">2</label><br><br>
+
+        <label>13. Which of the following methods can be used to add an item to a list?</label><br>
+        <input type="radio" id="append" name="question13" value="append" required>
+        <label for="append">append()</label><br>
+        <input type="radio" id="add" name="question13" value="add">
+        <label for="add">add()</label><br>
+        <input type="radio" id="insert" name="question13" value="insert">
+        <label for="insert">insert()</label><br><br>
+
+        <label>14. What does the `return` statement do?</label><br>
+        <input type="radio" id="ends_function" name="question14" value="Ends a function" required>
+        <label for="ends_function">Ends a function</label><br>
+        <input type="radio" id="returns_value" name="question14" value="Returns a value">
+        <label for="returns_value">Returns a value</label><br>
+        <input type="radio" id="both" name="question14" value="Both">
+        <label for="both">Both</label><br><br>
+
+        <label>15. Which of the following is used to create a comment in Python?</label><br>
+        <input type="radio" id="single_line" name="question15" value="#" required>
+        <label for="single_line">#</label><br>
+        <input type="radio" id="multi_line" name="question15" value="'''">
+        <label for="multi_line">'''</label><br>
+        <input type="radio" id="both" name="question15" value="Both">
+        <label for="both">Both</label><br><br>
+
+        <label>16. What will be the output of `print(5 == 5)`?</label><br>
+        <input type="radio" id="true2" name="question16" value="True" required>
+        <label for="true2">True</label><br>
+        <input type="radio" id="false2" name="question16" value="False">
+        <label for="false2">False</label><br><br>
+
+        <label>17. Which of the following is the correct syntax for a `for` loop?</label><br>
+        <input type="radio" id="for_loop" name="question17" value="for i in range(5):" required>
+        <label for="for_loop">for i in range(5):</label><br>
+        <input type="radio" id="loop" name="question17" value="for (i = 0; i < 5; i++)">
+        <label for="loop">for (i = 0; i < 5; i++)</label><br><br>
+
+        <label>18. What function is used to read input from the user?</label><br>
+        <input type="radio" id="input" name="question18" value="input()" required>
+        <label for="input">input()</label><br>
+        <input type="radio" id="raw_input" name="question18" value="raw_input()">
+        <label for="raw_input">raw_input()</label><br><br>
+
+        <label>19. Which of the following keywords is used to create a class in Python?</label><br>
+        <input type="radio" id="class" name="question19" value="class" required>
+        <label for="class">class</label><br>
+        <input type="radio" id="def" name="question19" value="def">
+        <label for="def">def</label><br><br>
+
+        <label>20. What will be the output of `print("Hello" * 3)`?</label><br>
+        <input type="radio" id="HelloHelloHello" name="question20" value="HelloHelloHello" required>
+        <label for="HelloHelloHello">HelloHelloHello</label><br>
+        <input type="radio" id="Hello3" name="question20" value="Hello3">
+        <label for="Hello3">Hello3</label><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
